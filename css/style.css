@@ -112,6 +112,7 @@ img {
 .header-contacts-list-link:hover,
 .header-contacts-list-link:focus {
 	color: #404bbf;
+	transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .header-contacts {
@@ -188,6 +189,7 @@ img {
 .hero-btn:hover,
 .hero-btn:focus {
 	background-color: #404bbf;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* hero end*/
 
@@ -287,28 +289,30 @@ img {
 	margin-bottom: 8px;
 }
 
-.our-team-list-icons {
+.list-icons {
 	display: flex;
 	justify-content: center;
 	align-items: center;
 	gap: 24px;
 }
 
-.our-team-icon-item {
+.icon-item {
 	width: 40px;
 	height: 40px;
 	background-color: #4d5ae5;
 	border-radius: 50%;
 }
 
-.our-team-icon-item:hover,
-.our-team-icon-item:focus {
+.icon-item:hover,
+.icon-item:focus {
+	background-color: #404bbf;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.our-team-icon {
+.icon {
 	fill: #fff;
 }
-.our-team-icon-link {
+.icon-link {
 	display: flex;
 	justify-content: center;
 	align-items: center;
@@ -355,6 +359,35 @@ img {
 .portfolio-list-item-text {
 	letter-spacing: 0.02em;
 }
+
+.overlay-container {
+	position: relative;
+	overflow: hidden;
+}
+
+.overlay-text {
+	font-weight: 400;
+	letter-spacing: 0.02em;
+	color: #f4f4fd;
+	background-color: #4d5ae5;
+	padding-top: 40px;
+	padding-right: 32px;
+	padding-left: 32px;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	z-index: 10;
+	transform: translateY(100%);
+}
+
+.overlay-container:hover .overlay-text,
+.overlay-container:focus .overlay-text {
+	transform: translateY(0);
+	transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
 /* portfolio end */
 
 /* footer */
@@ -378,5 +411,27 @@ img {
 	letter-spacing: 0.02em;
 	color: #f4f4fd;
 	max-width: 264px;
+}
+.footer-container {
+	display: flex;
+	gap: 120px;
+}
+
+.footer-icons-header {
+	font-weight: 500;
+	letter-spacing: 0.02em;
+	color: #fff;
+	/*margin-bottom: 16px; */
+	padding-bottom: 16px;
+}
+
+.footer-icons-container .list-icons {
+	gap: 16px;
+}
+
+.footer-icons-container .icon-item:hover,
+.footer-icons-container .icon-item:focus {
+	background-color: #31d0aa;
+	transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 /* footer end */
